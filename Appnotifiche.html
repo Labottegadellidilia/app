@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>La Bottega dell'Idilia — Gestione tavoli</title>
+<link rel="icon" type="image/jpeg" href="data:image/jpeg;base64,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">
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<style>
+  :root{
+    --bg: #F2EDE1;
+    --surface: #FFFFFF;
+    --surface-2: #E8E0CC;
+    --ink: #211C15;
+    --muted: #6C6152;
+    --wine: #4E1524;
+    --wine-dark: #35101B;
+    --olive: #96772A;
+    --olive-dark: #7A5F1F;
+    --amber: #B08628;
+    --line: #DDD3BC;
+    --radius-s: 6px;
+    --radius-m: 10px;
+    --radius-l: 16px;
+    --shadow: 0 1px 3px rgba(33,28,21,0.07), 0 2px 8px rgba(33,28,21,0.05);
+    --shadow-lift: 0 12px 32px rgba(33,28,21,0.18);
+    --gold: #B08628;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: none;
+  }
+  .brand{
+    font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+  }
+  #app{ display:flex; flex-direction:column; height:100%; min-height:100vh; }
+
+  /* HEADER */
+  header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 16px;
+    background:var(--wine);
+    color:#F1E6D0;
+    position:sticky; top:0; z-index:20;
+    box-shadow: var(--shadow);
+    border-bottom:2px solid var(--gold);
+  }
+  header .brand-group{ display:flex; align-items:center; gap:10px; min-width:0; }
+  header .logo-badge{
+    width:38px; height:38px; border-radius:50%; flex:0 0 auto;
+    background:#F1E6D0; color:var(--wine);
+    display:flex; align-items:center; justify-content:center;
+    font-family:Georgia,serif; font-weight:700; font-size:14px; letter-spacing:0.5px;
+    overflow:hidden; border:1.5px solid var(--gold);
+  }
+  .logo-badge img{ width:100%; height:100%; object-fit:cover; }
+  header .title{ display:flex; flex-direction:column; line-height:1.15; min-width:0; }
+  header .title .name{ font-family: Georgia, serif; font-size:17px; letter-spacing:0.2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  header .title .sub{ font-size:11px; color:#D8C3AE; margin-top:2px; }
+  header .actions{ display:flex; gap:6px; flex:0 0 auto; }
+  .edit-banner{
+    background:var(--amber); color:#2E2010; font-size:12.5px; text-align:center;
+    padding:8px 14px; line-height:1.4;
+  }
+  .icon-btn{
+    background:rgba(255,255,255,0.12);
+    border:none; color:#F1E6D0; width:38px; height:38px; border-radius:10px;
+    display:flex; align-items:center; justify-content:center; font-size:17px; cursor:pointer;
+  }
+  .icon-btn:active{ background:rgba(255,255,255,0.24); }
+  .icon-btn.on{ background:#F1E6D0; color:var(--wine); }
+
+  /* SYNC PILL */
+  .sync-pill{
+    font-size:10px; color:#D8C3AE; display:flex; align-items:center; gap:5px; margin-top:2px;
+  }
+  .sync-dot{ width:6px; height:6px; border-radius:50%; background:#7FA35C; }
+
+  /* FLOOR */
+  main{ flex:1; padding:16px; padding-bottom:90px; max-width:720px; width:100%; margin:0 auto; }
+  .floor-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    gap:14px;
+  }
+  .table-card{
+    aspect-ratio: 1 / 1;
+    background:var(--surface);
+    border:1.5px solid var(--line);
+    border-radius:var(--radius-l);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:6px;
+    cursor:pointer;
+    position:relative;
+    transition: transform .12s ease, box-shadow .12s ease;
+    box-shadow: var(--shadow);
+  }
+  .table-card:active{ transform: scale(0.96); }
+  .table-card.round{ border-radius:50%; }
+  .table-card .t-name{ font-weight:600; font-size:15px; text-align:center; padding:0 8px; }
+  .table-card .t-seats{ font-size:11px; color:var(--muted); }
+  .table-card .t-status{
+    position:absolute; top:10px; right:10px;
+    width:10px; height:10px; border-radius:50%;
+    background:#C4BBA4;
+  }
+  .table-card.status-libero{ border-color:var(--line); }
+  .table-card.status-libero .t-status{ background:#A9B48C; }
+  .table-card.status-comanda{ border-color:var(--amber); background:#F7EEDA; }
+  .table-card.status-comanda .t-status{ background:var(--amber); }
+  .table-card .t-total{ font-size:12px; color:var(--wine); font-weight:600; }
+  .table-card .t-edit-badge{
+    position:absolute; bottom:8px; right:8px; font-size:11px; color:var(--muted);
+  }
+
+  .add-table-card{
+    aspect-ratio:1/1;
+    border:2px dashed var(--line);
+    border-radius:var(--radius-l);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--muted); font-size:28px; cursor:pointer; background:transparent;
+  }
+  .add-table-card:active{ background:var(--surface-2); }
+
+  .empty-hint{ text-align:center; color:var(--muted); font-size:13px; margin-top:40px; line-height:1.5; }
+
+  /* OVERLAYS */
+  .overlay{
+    position:fixed; inset:0; background:rgba(33,28,21,0.45);
+    z-index:40; display:flex; justify-content:flex-end;
+    opacity:0; pointer-events:none; transition:opacity .18s ease;
+  }
+  .overlay.open{ opacity:1; pointer-events:auto; }
+  .panel{
+    background:var(--bg);
+    width:100%; max-width:480px; height:100%;
+    display:flex; flex-direction:column;
+    transform: translateX(24px);
+    transition: transform .18s ease;
+    box-shadow: var(--shadow-lift);
+  }
+  .overlay.open .panel{ transform: translateX(0); }
+  .panel-header{
+    background:var(--wine); color:#F1E6D0; padding:14px 16px;
+    display:flex; align-items:center; gap:10px;
+    position:sticky; top:0; z-index:2;
+  }
+  .panel-header input.name-edit{
+    background:transparent; border:none; border-bottom:1px solid rgba(241,230,208,0.4);
+    color:#F1E6D0; font-family:Georgia,serif; font-size:19px; padding:2px 0; flex:1; min-width:0;
+  }
+  .panel-header input.name-edit:focus{ outline:none; border-bottom-color:#F1E6D0; }
+  .panel-body{ flex:1; overflow-y:auto; padding:14px 16px 100px; }
+  .panel-close{ margin-left:auto; }
+
+  .section-label{ font-size:12px; text-transform:none; color:var(--muted); font-weight:600; margin:18px 0 8px; }
+  .section-label:first-child{ margin-top:0; }
+
+  .order-line{
+    background:var(--surface); border-radius:var(--radius-m); padding:10px 12px;
+    margin-bottom:8px; box-shadow:var(--shadow);
+  }
+  .order-line.selected{ background:#ECE0C4; box-shadow:0 0 0 1.5px var(--wine); }
+  .line-check{ width:20px; height:20px; flex:0 0 auto; }
+  .order-line .line-row{ display:flex; align-items:center; gap:10px; }
+  .order-line .li-info{ flex:1; min-width:0; }
+  .order-line .li-name{ font-weight:600; font-size:14px; }
+  .order-line .li-meta{ font-size:12px; color:var(--muted); margin-top:2px; }
+  .note-input{
+    width:100%; margin-top:8px; border:1px solid var(--line); border-radius:8px;
+    padding:7px 10px; font-size:12.5px; background:var(--bg); color:var(--ink);
+  }
+  .note-input::placeholder{ color:#A79C82; }
+  .qty-ctrl{ display:flex; align-items:center; gap:6px; }
+  .qty-ctrl button{
+    width:26px; height:26px; border-radius:8px; border:1px solid var(--line); background:var(--surface-2);
+    font-size:15px; cursor:pointer; color:var(--ink);
+  }
+  .qty-ctrl span{ min-width:18px; text-align:center; font-weight:600; font-size:14px; }
+  .weight-input{
+    width:58px; border:1px solid var(--line); border-radius:8px; padding:4px 6px; font-size:13px; text-align:right;
+  }
+  .remove-line{ background:none; border:none; color:#8C3524; font-size:18px; cursor:pointer; padding:4px; }
+
+  .total-bar{
+    display:flex; justify-content:space-between; align-items:center;
+    background:var(--surface-2); border-radius:var(--radius-m); padding:12px 14px; margin-top:6px;
+    font-weight:700; font-size:15px;
+  }
+  .total-bar .lbl{ font-weight:500; font-size:13px; color:var(--muted); }
+
+  .cat-tabs{ display:flex; gap:8px; overflow-x:auto; padding-bottom:4px; margin-bottom:10px; flex-wrap:wrap; }
+  .cat-tab{
+    flex:0 0 auto; padding:7px 14px; border-radius:999px; border:1px solid var(--line);
+    background:var(--surface); font-size:13px; cursor:pointer; color:var(--ink); white-space:nowrap;
+  }
+  .cat-tab.active{ background:var(--olive); border-color:var(--olive); color:#fff; }
+  .conto-tab.active{ background:var(--wine); border-color:var(--wine); }
+  .conto-del{ margin-left:6px; opacity:0.75; }
+  .conto-add{ border-style:dashed; color:var(--olive-dark); background:transparent; }
+
+  .menu-item-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:11px 4px; border-bottom:1px solid var(--line); cursor:pointer;
+  }
+  .menu-item-row:last-child{ border-bottom:none; }
+  .menu-item-row .mi-name{ font-size:14px; font-weight:500; }
+  .menu-item-row .mi-price{ font-size:13px; color:var(--muted); }
+  .menu-item-row .mi-tag{ font-size:10px; color:var(--olive-dark); }
+
+  .guide-item{ padding:12px 4px; border-bottom:1px solid var(--line); }
+  .guide-item:last-child{ border-bottom:none; }
+  .guide-name{ font-weight:700; font-size:14px; }
+  .guide-desc{ font-size:12.5px; color:var(--muted); margin-top:3px; line-height:1.45; }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:6px;
+    padding:11px 16px; border-radius:var(--radius-m); border:none; font-size:14px; font-weight:600;
+    cursor:pointer;
+  }
+  .btn-primary{ background:var(--wine); color:#F1E6D0; }
+  .btn-primary:active{ background:var(--wine-dark); }
+  .btn-outline{ background:transparent; border:1px solid var(--line); color:var(--ink); }
+  .btn-outline:active{ background:var(--surface-2); }
+  .btn-danger{ background:#8C3524; color:#fff; }
+  .btn-block{ width:100%; }
+  .btn-ghost{ background:none; color:var(--wine); border:none; font-weight:600; font-size:13px; padding:6px 2px; cursor:pointer; }
+
+  .field{ margin-bottom:12px; }
+  .field label{ display:block; font-size:12px; color:var(--muted); margin-bottom:5px; font-weight:600; }
+  .field input, .field select{
+    width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:var(--radius-m);
+    font-size:14px; background:var(--surface); color:var(--ink);
+  }
+  .field textarea{
+    width:100%; padding:10px 12px; border:1px solid var(--line); border-radius:var(--radius-m);
+    font-size:14px; background:var(--surface); color:var(--ink); font-family:inherit; resize:vertical;
+  }
+  .row2{ display:flex; gap:10px; }
+  .row2 > .field{ flex:1; }
+  .checkbox-field{ display:flex; align-items:center; gap:8px; margin-bottom:14px; }
+  .checkbox-field input{ width:18px; height:18px; }
+  .checkbox-field label{ font-size:13px; color:var(--ink); font-weight:500; }
+
+  .shape-picker{ display:flex; gap:10px; }
+  .shape-opt{
+    flex:1; padding:14px; border:2px solid var(--line); border-radius:var(--radius-m);
+    text-align:center; cursor:pointer; font-size:13px; color:var(--muted);
+  }
+  .shape-opt.selected{ border-color:var(--wine); color:var(--wine); background:#F1E3E0; font-weight:600; }
+
+  .cat-block{ margin-bottom:22px; }
+  .cat-block-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; }
+  .cat-block-head .cname{ font-weight:700; font-size:15px; }
+  .cat-block-body{ background:var(--surface); border-radius:var(--radius-m); box-shadow:var(--shadow); padding:2px 12px; }
+  .link-danger{ color:#8C3524; font-size:12px; cursor:pointer; background:none; border:none; }
+
+  .modal-mini{
+    position:fixed; inset:0; background:rgba(33,28,21,0.5); z-index:60;
+    display:flex; align-items:flex-end; justify-content:center;
+  }
+  .modal-mini .sheet{
+    background:var(--bg); width:100%; max-width:480px; border-radius:18px 18px 0 0;
+    padding:18px 16px 22px; max-height:88vh; overflow-y:auto;
+  }
+  .modal-mini h3{ margin:0 0 14px; font-family:Georgia,serif; font-size:19px; }
+  .sheet-actions{ display:flex; gap:10px; margin-top:16px; }
+  .sheet-actions .btn{ flex:1; }
+
+  .fab-add{
+    position:fixed; right:20px; bottom:20px; z-index:15;
+    width:56px; height:56px; border-radius:50%; background:var(--olive); color:#fff;
+    border:none; font-size:26px; box-shadow:var(--shadow-lift); cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .fab-add:active{ background:var(--olive-dark); }
+
+  @media (min-width:600px){
+    .overlay{ background:rgba(33,28,21,0.35); }
+  }
+
+  /* BAR MODE */
+  .bar-audio-banner{
+    background:var(--gold); color:#2E2010; text-align:center; font-weight:700;
+    padding:12px 16px; cursor:pointer; font-size:14px;
+  }
+  .bar-table-group{ margin-bottom:26px; }
+  .bar-table-name{ font-family:Georgia,serif; font-size:19px; color:var(--wine); margin-bottom:10px; }
+  .bar-cards{ display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:12px; }
+  .bar-card{
+    background:var(--surface); border:1.5px solid var(--line); border-radius:var(--radius-l);
+    padding:16px; box-shadow:var(--shadow); transition: background .3s ease, box-shadow .3s ease;
+  }
+  .bar-card-main{ display:flex; align-items:baseline; gap:10px; margin-bottom:6px; }
+  .bar-card-qty{ font-family:Georgia,serif; font-size:22px; color:var(--wine); font-weight:700; }
+  .bar-card-name{ font-size:17px; font-weight:600; }
+  .bar-card-note{ font-size:13px; color:var(--muted); margin-bottom:10px; font-style:italic; }
+  .bar-done-btn{ margin-top:4px; }
+  .bar-card.bar-flash{
+    background:var(--tint-open, #F7EEDA);
+    box-shadow: 0 0 0 3px var(--gold), var(--shadow-lift);
+    animation: bar-pulse 1s ease-in-out infinite;
+  }
+  @keyframes bar-pulse{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.02); }
+  }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  const LOGO_DATAURL = 'data:image/jpeg;base64,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';
+
+  /* ---------- utils ---------- */
+  const uid = () => Math.random().toString(36).slice(2,10) + Date.now().toString(36).slice(-4);
+  const eur = (n) => (Math.round((n||0)*100)/100).toFixed(2).replace('.', ',') + ' €';
+  const escapeHtml = (s) => (s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  /* ---------- guida (contenuto statico di riferimento) ---------- */
+  const DEFAULT_GUIDA_TAGLIERI = [
+    {name:'Salame', desc:"Salame Milano, Napoli o Felino: sapore equilibrato, base sicura per ogni tagliere misto."},
+    {name:'Prosciutto crudo', desc:"San Daniele o Parma: dolce e delicato. Affettarlo fine, servirlo per ultimo perché si asciuga in fretta."},
+    {name:'Prosciutto cotto', desc:"Alternativa più morbida e meno salata del crudo, apprezzata anche dai palati più semplici."},
+    {name:'Spalla cotta', desc:"Più saporita del prosciutto cotto, tipica del centro Italia."},
+    {name:'Coppa', desc:"Suino stagionato, gusto intenso e speziato: va servita a fette sottili."},
+    {name:'Pancetta', desc:"Stesa o arrotolata (coppata): ottima anche leggermente scaldata prima di servire."},
+    {name:'Rigatino', desc:"Pancetta toscana arrotolata e speziata con pepe nero: dà carattere al tagliere."},
+    {name:'Culatello', desc:"Il cuore della coscia del maiale, molto pregiato e delicato: servire in piccole porzioni."},
+    {name:'Guanciale', desc:"Molto saporito e grasso, va affettato sottilissimo."},
+    {name:'Bresaola', desc:"Carne di manzo stagionata, magra: buon contrasto con i salumi più grassi."},
+    {name:'Ventricina', desc:"Salume abruzzese piccante, per chi ama il gusto forte."},
+    {name:'Pecorino (fresco/stagionato)', desc:"Accompagna bene sia i salumi dolci che quelli piccanti; ottimo con il miele."},
+    {name:'Formaggio di fossa o caciotta', desc:"Aggiungono varietà di consistenza e sapore al tagliere."},
+    {name:'Accompagnamenti', desc:"Miele, confettura di fichi o cipolle, noci, grissini o pane carasau completano la presentazione."},
+  ];
+  const DEFAULT_GUIDA_COCKTAIL = [
+    {name:'Spritz', desc:"3 parti Prosecco, 2 parti Aperol, 1 parte soda, ghiaccio abbondante, fetta d'arancia."},
+    {name:'Negroni', desc:"1/3 gin, 1/3 vermouth rosso, 1/3 Campari, mescolato con ghiaccio, scorza d'arancia."},
+    {name:'Americano', desc:"1/3 vermouth rosso, 1/3 Campari, 1/3 soda, ghiaccio, scorza d'arancia."},
+    {name:'Gin Tonic', desc:"4 cl gin, tonica fino a riempire, ghiaccio abbondante, fetta di limone o lime."},
+    {name:'Moscow Mule', desc:"4,5 cl vodka, 1,5 cl succo di lime, ginger beer fino a riempire, ghiaccio."},
+    {name:'Margarita', desc:"3,5 cl tequila, 2 cl triple sec, 1,5 cl succo di lime, shakerato con ghiaccio."},
+    {name:'Mojito', desc:"4,5 cl rum bianco, 6-8 foglie di menta, 2 cl succo di lime, 2 cucchiaini di zucchero, soda, ghiaccio tritato."},
+    {name:'Cuba Libre', desc:"5 cl rum, succo di lime, cola fino a riempire, ghiaccio."},
+    {name:'Old Fashioned', desc:"4,5 cl whiskey, una zolletta di zucchero, 2 gocce di angostura, scorza d'arancia, ghiaccio."},
+  ];
+  function defaultGuida(){
+    return {
+      taglieri: DEFAULT_GUIDA_TAGLIERI.map(g => ({id: uid(), name: g.name, desc: g.desc})),
+      cocktail: DEFAULT_GUIDA_COCKTAIL.map(g => ({id: uid(), name: g.name, desc: g.desc})),
+    };
+  }
+
+  /* ---------- default data ---------- */
+  function defaultTables(){
+    return [
+      {id: uid(), name:'Tavolo 1', shape:'round', seats:2},
+      {id: uid(), name:'Tavolo 2', shape:'round', seats:4},
+      {id: uid(), name:'Tavolo 3', shape:'square', seats:4},
+      {id: uid(), name:'Tavolo 4', shape:'square', seats:6},
+    ];
+  }
+  function defaultMenu(){
+    return [
+      {id:uid(), name:'Bevande', items:[
+        {id:uid(), name:'Acqua naturale', price:2.0, weight:false},
+        {id:uid(), name:'Coca Cola', price:3.5, weight:false},
+        {id:uid(), name:'Spritz', price:6.0, weight:false, cocktail:true},
+      ]},
+      {id:uid(), name:'Alcolici', items:[
+        {id:uid(), name:'Calice vino rosso', price:4.5, weight:false},
+        {id:uid(), name:'Birra alla spina 0,4L', price:5.0, weight:false},
+      ]},
+      {id:uid(), name:'Cibo', items:[
+        {id:uid(), name:'Bruschetta', price:5.0, weight:false},
+        {id:uid(), name:'Panino', price:7.0, weight:false},
+      ]},
+      {id:uid(), name:'Taglieri', items:[
+        {id:uid(), name:'Prosciutto crudo', price:3.5, weight:true},
+        {id:uid(), name:'Salame', price:3.0, weight:true},
+        {id:uid(), name:'Pecorino', price:4.0, weight:true},
+      ]},
+      {id:uid(), name:'Dolci', items:[
+        {id:uid(), name:'Tiramisù', price:5.5, weight:false},
+      ]},
+    ];
+  }
+
+  /* ---------- state ---------- */
+  let state = {
+    tables: [],
+    menu: [],
+    // orders[tableId] = [ {id, name, lines:[{id,itemId,name,categoryName,price,qty,weight,note}]} ]  (array di "conti")
+    orders: {},
+    // log = elenco di conti separati chiusi/incassati: [{id, timestamp, tableId, tableName, contoName, items:[...], total}]
+    log: [],
+    // guida = { taglieri:[{id,name,desc}], cocktail:[{id,name,desc}] } — modificabile dall'utente
+    guida: {taglieri:[], cocktail:[]},
+  };
+  let ui = {
+    editMode: false,
+    openTableId: null,
+    activeCat: null,
+    activeContoId: null,
+    menuManagerOpen: false,
+    guidaOpen: false,
+    guidaTab: 'taglieri',
+    logOpen: false,
+    selectMode: false,
+    selectedLines: {},
+    exitConfirmOpen: false,
+    modal: null,
+    lastSavedTick: 0,
+  };
+
+  const SUPABASE_URL = 'https://kthkxlfrybtpslxqtugn.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt0aGt4bGZyeWJ0cHNseHF0dWduIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg5MTI0OTMsImV4cCI6MjEwNDQ4ODQ5M30.PZTYiKp68FfgAeKsb7yL60FoJ7CX4afaifFo_A-biFQ';
+  const ROW_ID = 'main';
+  const hasStorage = !!(window.supabase && SUPABASE_URL);
+  const sb = hasStorage ? window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+  let connError = false;
+
+  /* ---------- modalità "Bar" (schermata secondaria solo cocktail) ---------- */
+  const BAR_MODE = (function(){
+    try{ return new URLSearchParams(location.search).get('bar') === '1'; }
+    catch(e){ return false; }
+  })();
+  let audioCtx = null;
+  let audioUnlocked = false;
+  let barInitialized = false;
+  let barKnownQty = {};   // lineId -> ultima quantità vista
+  let barHighlight = {};  // lineId -> true mentre è evidenziato come "nuovo"
+  let barDismissed = {};  // lineId -> true se il barista l'ha segnato come fatto
+
+  /* ---------- notifiche push (funzionano anche a browser chiuso) ---------- */
+  const VAPID_PUBLIC_KEY = 'BMJ5ri2305yO8k_ZgMtzRbjkiBETHGVDmr6PqYEC77nqCYWmeAI8QCZumVslmc-2CLth_9YXJc40Ue9FyIyc-2E';
+  let pushSubscribed = false;
+  let pushDeviceId = null;
+  try{ pushDeviceId = localStorage.getItem('bottega_push_device_id'); }catch(e){}
+  if(!pushDeviceId){
+    pushDeviceId = uid() + uid();
+    try{ localStorage.setItem('bottega_push_device_id', pushDeviceId); }catch(e){}
+  }
+  function urlBase64ToUint8Array(base64String){
+    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const base64 = (base64String + padding).replace(/-/g, '+').replace(/_/g, '/');
+    const raw = atob(base64);
+    const arr = new Uint8Array(raw.length);
+    for(let i=0;i<raw.length;i++) arr[i] = raw.charCodeAt(i);
+    return arr;
+  }
+  async function enablePushNotifications(){
+    if(!('serviceWorker' in navigator) || !('PushManager' in window)){
+      alert('Questo browser non supporta le notifiche push.');
+      return;
+    }
+    try{
+      const perm = await Notification.requestPermission();
+      if(perm !== 'granted'){ alert('Permesso notifiche negato.'); return; }
+      const reg = await navigator.serviceWorker.register('./sw.js');
+      await navigator.serviceWorker.ready;
+      let sub = await reg.pushManager.getSubscription();
+      if(!sub){
+        sub = await reg.pushManager.subscribe({
+          userVisibleOnly: true,
+          applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
+        });
+      }
+      if(hasStorage){
+        await sb.from('push_subscriptions').upsert({ id: pushDeviceId, subscription: sub.toJSON() });
+      }
+      pushSubscribed = true;
+      render();
+    }catch(e){
+      console.error('push subscribe error', e);
+      alert('Non sono riuscito ad attivare le notifiche push. Riprova.');
+    }
+  }
+  async function checkExistingPushSubscription(){
+    try{
+      if(!('serviceWorker' in navigator)) return;
+      const reg = await navigator.serviceWorker.getRegistration('./sw.js');
+      if(!reg) return;
+      const sub = await reg.pushManager.getSubscription();
+      if(sub){ pushSubscribed = true; render(); }
+    }catch(e){}
+  }
+
+  function beep(){
+    if(!audioCtx) return;
+    try{
+      const t0 = audioCtx.currentTime;
+      [ [880, t0], [1046, t0+0.22] ].forEach(([freq, t])=>{
+        const o = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        o.type = 'sine'; o.frequency.value = freq;
+        g.gain.setValueAtTime(0.0001, t);
+        g.gain.exponentialRampToValueAtTime(0.35, t+0.01);
+        g.gain.exponentialRampToValueAtTime(0.0001, t+0.35);
+        o.connect(g); g.connect(audioCtx.destination);
+        o.start(t); o.stop(t+0.36);
+      });
+    }catch(e){}
+    if(navigator.vibrate) try{ navigator.vibrate([180,80,180]); }catch(e){}
+  }
+
+  function allCocktailLines(){
+    const out = [];
+    state.tables.forEach(t=>{
+      allLines(t.id).forEach(l=>{
+        if(l.cocktail) out.push(Object.assign({}, l, {tableId: t.id, tableName: t.name}));
+      });
+    });
+    // più vecchi prima (ordine di arrivo)
+    out.sort((a,b)=> (a.createdAt||'').localeCompare(b.createdAt||''));
+    return out;
+  }
+
+  function computeCocktailUpdates(lines){
+    let anyNew = false;
+    const nextQty = {};
+    lines.forEach(l=>{
+      const prev = barKnownQty[l.id];
+      if(prev===undefined || l.qty > prev){
+        if(barInitialized) { anyNew = true; barHighlight[l.id] = true; delete barDismissed[l.id]; }
+      }
+      nextQty[l.id] = l.qty;
+    });
+    barKnownQty = nextQty;
+    barInitialized = true;
+    return anyNew;
+  }
+
+  async function loadAll(){
+    if(!hasStorage){ seedIfEmpty(); render(); return; }
+    try{
+      const { data, error } = await sb.from('app_state').select('*').eq('id', ROW_ID).single();
+      if(error) throw error;
+      state.tables = (data && data.tables && data.tables.length) ? data.tables : defaultTables();
+      state.menu = (data && data.menu && data.menu.length) ? data.menu : defaultMenu();
+      state.orders = (data && data.orders) ? data.orders : {};
+      state.log = (data && data.log) ? data.log : [];
+      state.guida = (data && data.guida && (data.guida.taglieri || data.guida.cocktail)) ? data.guida : defaultGuida();
+      if(!data || !data.tables || !data.tables.length || !data.menu || !data.menu.length){
+        await sb.from('app_state').update({ tables: state.tables, menu: state.menu, orders: state.orders }).eq('id', ROW_ID);
+      }
+    }catch(e){
+      console.error('load error', e);
+      connError = true;
+      seedIfEmpty();
+    }
+    render();
+    subscribeRealtime();
+    startPolling();
+    if(BAR_MODE) checkExistingPushSubscription();
+  }
+  function seedIfEmpty(){
+    if(state.tables.length===0) state.tables = defaultTables();
+    if(state.menu.length===0) state.menu = defaultMenu();
+  }
+  async function persist(which){
+    ui.lastSavedTick = Date.now();
+    if(!hasStorage) return;
+    try{
+      const payload = { updated_at: new Date().toISOString() };
+      payload[which] = state[which];
+      const { error } = await sb.from('app_state').update(payload).eq('id', ROW_ID);
+      if(error) throw error;
+      connError = false;
+    }catch(e){ console.error('save error', e); connError = true; render(); }
+  }
+
+  function applyRemoteRow(row){
+    if(!row) return false;
+    let changed = false;
+    if(row.tables && JSON.stringify(row.tables)!==JSON.stringify(state.tables)){ state.tables = row.tables; changed = true; }
+    if(row.menu && JSON.stringify(row.menu)!==JSON.stringify(state.menu)){ state.menu = row.menu; changed = true; }
+    if(row.orders && JSON.stringify(row.orders)!==JSON.stringify(state.orders)){ state.orders = row.orders; changed = true; }
+    if(row.log && JSON.stringify(row.log)!==JSON.stringify(state.log)){ state.log = row.log; changed = true; }
+    if(row.guida && JSON.stringify(row.guida)!==JSON.stringify(state.guida)){ state.guida = row.guida; changed = true; }
+    return changed;
+  }
+
+  function subscribeRealtime(){
+    if(!hasStorage) return;
+    try{
+      sb.channel('app_state_changes')
+        .on('postgres_changes', { event:'UPDATE', schema:'public', table:'app_state', filter:`id=eq.${ROW_ID}` }, (payload)=>{
+          if(Date.now() - ui.lastSavedTick < 1200) return;
+          if(applyRemoteRow(payload.new)) render();
+        })
+        .subscribe();
+    }catch(e){ console.error('realtime subscribe error', e); }
+  }
+
+  let polling = false;
+  function startPolling(){
+    if(polling || !hasStorage) return;
+    polling = true;
+    setInterval(async ()=>{
+      if(Date.now() - ui.lastSavedTick < 1500) return;
+      try{
+        const { data, error } = await sb.from('app_state').select('*').eq('id', ROW_ID).single();
+        if(error) throw error;
+        connError = false;
+        if(applyRemoteRow(data)) render();
+      }catch(e){ connError = true; }
+    }, 6000);
+  }
+
+  /* ---------- conti / ordini ---------- */
+  // Lettura pura (nessuna mutazione), usata dalla plancia tavoli. Gestisce sia il vecchio
+  // formato (array di righe) sia il nuovo (array di conti) per compatibilità.
+  function allLines(tableId){
+    const raw = state.orders[tableId];
+    if(!raw || !Array.isArray(raw) || raw.length===0) return [];
+    if(raw[0] && raw[0].lines) return raw.flatMap(c => c.lines || []);
+    return raw; // vecchio formato flat
+  }
+  function tableTotal(tableId){
+    return allLines(tableId).reduce((sum, l) => sum + lineTotal(l), 0);
+  }
+  function lineTotal(l){
+    if(l.weight!=null) return (l.price * (l.weight/100)) * l.qty;
+    return l.price * l.qty;
+  }
+  function tableStatus(tableId){
+    return allLines(tableId).length > 0 ? 'comanda' : 'libero';
+  }
+  function contoTotal(conto){
+    return (conto.lines||[]).reduce((sum, l) => sum + lineTotal(l), 0);
+  }
+  // Lettura CON migrazione/creazione, usata solo quando si apre/modifica un tavolo.
+  function getConti(tableId){
+    let raw = state.orders[tableId];
+    if(!raw || !Array.isArray(raw) || raw.length===0){
+      raw = [{id: uid(), name:'Conto 1', lines: []}];
+      state.orders[tableId] = raw;
+    } else if(raw[0] && !raw[0].lines){
+      raw = [{id: uid(), name:'Conto 1', lines: raw}];
+      state.orders[tableId] = raw;
+    }
+    return state.orders[tableId];
+  }
+  function findLine(tableId, lineId){
+    const conti = getConti(tableId);
+    for(const c of conti){
+      const l = (c.lines||[]).find(x=>x.id===lineId);
+      if(l) return {conto:c, line:l};
+    }
+    return null;
+  }
+
+  /* ---------- render ---------- */
+  function render(){
+    const app = document.getElementById('app');
+    if(BAR_MODE){ app.innerHTML = barView(); return; }
+    app.innerHTML = `
+      ${header()}
+      <main>${floorGrid()}</main>
+      ${ui.editMode ? `<button class="fab-add" onclick="App.openAddTable()">+</button>` : ''}
+      ${ui.openTableId ? tablePanel() : ''}
+      ${ui.menuManagerOpen ? menuManagerPanel() : ''}
+      ${ui.guidaOpen ? guidaPanel() : ''}
+      ${ui.logOpen ? logPanel() : ''}
+      ${ui.modal ? modalMarkup() : ''}
+      ${ui.exitConfirmOpen ? exitConfirmMarkup() : ''}
+    `;
+  }
+
+  function header(){
+    return `
+      <header>
+        <div class="brand-group">
+          <div class="logo-badge" id="logo-slot"><img src="${LOGO_DATAURL}" alt="logo"></div>
+          <div class="title">
+            <div class="name brand">La Bottega dell'Idilia</div>
+            <div class="sync-pill"><span class="sync-dot" style="background:${!hasStorage ? '#C4BBA4' : (connError ? '#8C3524' : '#7FA35C')}"></span>${!hasStorage ? 'Connessione non disponibile' : (connError ? 'Connessione assente — riprovo…' : 'Sincronizzato tra dispositivi')}</div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="icon-btn ${ui.editMode?'on':''}" onclick="App.toggleEdit()" title="Modifica tavoli"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></button>
+          <button class="icon-btn" onclick="App.openGuida()" title="Guida"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></button>
+          <button class="icon-btn" onclick="App.openLog()" title="Log incassi"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h16v20l-3-2-2 2-2-2-2 2-2-2-2 2-3-2Z"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></button>
+          <button class="icon-btn" onclick="App.openMenuManager()" title="Gestisci menu"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+      </header>
+      ${ui.editMode ? `<div class="edit-banner">Modalità modifica: tocca un tavolo per modificarlo o eliminarlo, oppure tocca "+" per aggiungerne uno nuovo.</div>` : ''}
+    `;
+  }
+
+  function floorGrid(){
+    if(state.tables.length===0){
+      return `<div class="empty-hint">Nessun tavolo ancora.<br>Tocca ✎ in alto per aggiungerne uno.</div>`;
+    }
+    const cards = state.tables.map(t=>{
+      const status = tableStatus(t.id);
+      const total = tableTotal(t.id);
+      return `
+        <div class="table-card ${t.shape} status-${status}" onclick="${ui.editMode ? `App.openEditTable('${t.id}')` : `App.openTable('${t.id}')`}">
+          <span class="t-status"></span>
+          <div class="t-name">${escapeHtml(t.name)}</div>
+          <div class="t-seats">${t.seats} coperti</div>
+          ${status==='comanda' ? `<div class="t-total">${eur(total)}</div>` : ''}
+          ${ui.editMode ? `<div class="t-edit-badge">modifica</div>` : ''}
+        </div>
+      `;
+    }).join('');
+    return `<div class="floor-grid">${cards}${ui.editMode ? `<div class="add-table-card" onclick="App.openAddTable()">+</div>` : ''}</div>`;
+  }
+
+  function tablePanel(){
+    const t = state.tables.find(x=>x.id===ui.openTableId);
+    if(!t) return '';
+    const conti = getConti(t.id);
+    if(!ui.activeContoId || !conti.find(c=>c.id===ui.activeContoId)) ui.activeContoId = conti[0].id;
+    const activeConto = conti.find(c=>c.id===ui.activeContoId);
+    const lines = activeConto.lines || [];
+
+    const cats = state.menu;
+    if(!ui.activeCat && cats.length) ui.activeCat = cats[0].id;
+    const activeCat = cats.find(c=>c.id===ui.activeCat) || cats[0];
+
+    const contiTabsHtml = conti.map(c => `
+      <button class="cat-tab conto-tab ${c.id===activeConto.id?'active':''}" onclick="App.setActiveConto('${c.id}')">
+        ${escapeHtml(c.name)}${conti.length>1 ? ` <span class="conto-del" onclick="event.stopPropagation();App.deleteConto('${c.id}')">×</span>` : ''}
+      </button>
+    `).join('');
+
+    const linesHtml = lines.length ? lines.map(l => `
+      <div class="order-line ${ui.selectMode && ui.selectedLines[l.id] ? 'selected' : ''}">
+        <div class="line-row">
+          ${ui.selectMode ? `<input type="checkbox" class="line-check" ${ui.selectedLines[l.id] ? 'checked' : ''} onchange="App.toggleLineSelected('${l.id}')">` : ''}
+          <div class="li-info">
+            <div class="li-name">${escapeHtml(l.name)}</div>
+            <div class="li-meta">${l.weight!=null ? `${eur(l.price)} /100g` : eur(l.price)} · ${l.categoryName}</div>
+          </div>
+          ${(!ui.selectMode && l.weight!=null) ? `
+            <input class="weight-input" type="number" min="0" step="10" value="${l.weight}" onchange="App.setWeight('${l.id}', this.value)"> g
+          ` : ''}
+          ${ui.selectMode ? `<div class="li-meta" style="font-weight:600;">${eur(lineTotal(l))}</div>` : `
+          <div class="qty-ctrl">
+            <button onclick="App.changeQty('${l.id}', -1)">−</button>
+            <span>${l.qty}</span>
+            <button onclick="App.changeQty('${l.id}', 1)">+</button>
+          </div>
+          <button class="remove-line" onclick="App.removeLine('${l.id}')">×</button>
+          `}
+        </div>
+        ${!ui.selectMode ? `<input class="note-input" type="text" placeholder="Nota per la cucina (es. senza cipolla)" value="${escapeHtml(l.note||'')}" onchange="App.setNote('${l.id}', this.value)">` : ''}
+      </div>
+    `).join('') : `<div class="empty-hint" style="margin-top:8px;">Nessun elemento in questo conto.<br>Aggiungi dal menu qui sotto.</div>`;
+
+    const selectedTotal = lines.filter(l=>ui.selectedLines[l.id]).reduce((s,l)=>s+lineTotal(l),0);
+    const selectedCount = lines.filter(l=>ui.selectedLines[l.id]).length;
+
+    const tabsHtml = cats.map(c => `
+      <button class="cat-tab ${c.id===activeCat?.id?'active':''}" onclick="App.setActiveCat('${c.id}')">${escapeHtml(c.name)}</button>
+    `).join('');
+
+    const itemsHtml = (activeCat?.items||[]).map(it => `
+      <div class="menu-item-row" onclick="App.addLine('${activeCat.id}','${it.id}')">
+        <div>
+          <div class="mi-name">${escapeHtml(it.name)}</div>
+          ${it.weight ? `<div class="mi-tag">venduto al peso</div>` : ''}${it.cocktail ? `<div class="mi-tag" style="color:var(--wine);">cocktail</div>` : ''}
+        </div>
+        <div class="mi-price">${it.weight ? eur(it.price)+' /100g' : eur(it.price)}</div>
+      </div>
+    `).join('') || `<div class="empty-hint">Categoria vuota.</div>`;
+
+    return `
+      <div class="overlay open" onclick="if(event.target===this) App.closeTable()">
+        <div class="panel">
+          <div class="panel-header">
+            <input id="tname-input" class="name-edit" value="${escapeHtml(t.name)}" onchange="App.renameTable('${t.id}', this.value)">
+            <button class="icon-btn panel-close" onclick="App.closeTable()">✕</button>
+          </div>
+          <div class="panel-body">
+            <div class="section-label">Conti</div>
+            <div class="cat-tabs">${contiTabsHtml}<button class="cat-tab conto-add" onclick="App.addConto()">+ conto</button></div>
+
+            <div class="section-label" style="display:flex; align-items:center; justify-content:space-between;">
+              <span>Comanda — ${escapeHtml(activeConto.name)}</span>
+              ${lines.length ? `<button class="btn-ghost" onclick="App.toggleSelectMode()">${ui.selectMode ? 'Annulla selezione' : 'Seleziona per pagare'}</button>` : ''}
+            </div>
+            ${linesHtml}
+            ${ui.selectMode ? `
+            <div class="total-bar" style="background:#ECE0C4; border:1px dashed var(--wine);">
+              <span class="lbl">${selectedCount} selezionati</span>
+              <span>${eur(selectedTotal)}</span>
+            </div>
+            <button class="btn btn-primary btn-block" style="margin-top:8px;" onclick="App.makeSeparateBill()">Conto separato</button>
+            ` : `
+            <div class="total-bar">
+              <span class="lbl">Totale conto</span>
+              <span>${eur(contoTotal(activeConto))}</span>
+            </div>
+            ${conti.length>1 ? `
+            <div class="total-bar" style="background:transparent; box-shadow:none; padding:8px 4px 0;">
+              <span class="lbl">Totale tavolo (tutti i conti)</span>
+              <span style="color:var(--wine); font-size:14px;">${eur(tableTotal(t.id))}</span>
+            </div>` : ''}
+            `}
+
+            <div class="section-label">Aggiungi elemento</div>
+            <div class="cat-tabs">${tabsHtml}</div>
+            <div class="cat-block-body">${itemsHtml}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function menuManagerPanel(){
+    const cats = state.menu;
+    const blocks = cats.map(c => `
+      <div class="cat-block">
+        <div class="cat-block-head">
+          <div class="cname">${escapeHtml(c.name)}</div>
+          <div style="display:flex; gap:14px;">
+            <button class="link-danger" style="color:var(--olive-dark);" onclick="App.openAddItem('${c.id}')">+ elemento</button>
+            <button class="link-danger" onclick="App.deleteCategory('${c.id}')">elimina categoria</button>
+          </div>
+        </div>
+        <div class="cat-block-body">
+          ${(c.items||[]).map(it => `
+            <div class="menu-item-row" onclick="App.openEditItem('${c.id}','${it.id}')">
+              <div>
+                <div class="mi-name">${escapeHtml(it.name)}</div>
+                ${it.weight ? `<div class="mi-tag">venduto al peso</div>` : ''}${it.cocktail ? `<div class="mi-tag" style="color:var(--wine);">cocktail</div>` : ''}
+              </div>
+              <div class="mi-price">${it.weight ? eur(it.price)+' /100g' : eur(it.price)}</div>
+            </div>
+          `).join('') || `<div class="empty-hint" style="margin:6px 0;">Nessun elemento.</div>`}
+        </div>
+      </div>
+    `).join('');
+
+    return `
+      <div class="overlay open" onclick="if(event.target===this) App.closeMenuManager()">
+        <div class="panel">
+          <div class="panel-header">
+            <div class="name-edit brand" style="font-family:Georgia,serif; font-size:19px;">Gestione menu</div>
+            <button class="icon-btn panel-close" onclick="App.closeMenuManager()">✕</button>
+          </div>
+          <div class="panel-body">
+            ${blocks || `<div class="empty-hint">Nessuna categoria.</div>`}
+            <button class="btn btn-outline btn-block" onclick="App.openAddCategory()">+ Nuova categoria</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function barView(){
+    const allNow = allCocktailLines();
+    const anyNew = computeCocktailUpdates(allNow);
+    const lines = allNow.filter(l => !barDismissed[l.id]);
+    if(anyNew){
+      beep();
+      setTimeout(()=>{ barHighlight = {}; render(); }, 7000);
+    }
+    const byTable = {};
+    lines.forEach(l=>{
+      if(!byTable[l.tableId]) byTable[l.tableId] = {tableName: l.tableName, lines: []};
+      byTable[l.tableId].lines.push(l);
+    });
+    const groups = Object.values(byTable);
+
+    const audioBanner = !audioUnlocked ? `
+      <div class="bar-audio-banner" onclick="App.barUnlockAudio()">🔊 Tocca qui per attivare l'audio delle notifiche</div>
+    ` : '';
+    const pushBanner = !pushSubscribed ? `
+      <div class="bar-audio-banner" style="background:var(--wine); color:#F1E6D0;" onclick="App.enablePush()">🔔 Attiva notifiche anche a pagina chiusa</div>
+    ` : `
+      <div class="bar-audio-banner" style="background:var(--surface-2); color:var(--muted); cursor:default;">🔔 Notifiche push attive su questo dispositivo</div>
+    `;
+
+    const body = groups.length ? groups.map(g => `
+      <div class="bar-table-group">
+        <div class="bar-table-name">${escapeHtml(g.tableName)}</div>
+        <div class="bar-cards">
+          ${g.lines.map(l => `
+            <div class="bar-card ${barHighlight[l.id] ? 'bar-flash' : ''}">
+              <div class="bar-card-main">
+                <div class="bar-card-qty">${l.qty}×</div>
+                <div class="bar-card-name">${escapeHtml(l.name)}</div>
+              </div>
+              ${l.note ? `<div class="bar-card-note">${escapeHtml(l.note)}</div>` : ''}
+              <button class="btn btn-outline btn-block bar-done-btn" onclick="App.barToggleDone('${l.id}')">✓ Fatto</button>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('') : `<div class="empty-hint" style="margin-top:60px; font-size:15px;">Nessun cocktail in attesa.<br>Qui compariranno automaticamente i nuovi ordini.</div>`;
+
+    return `
+      <header>
+        <div class="brand-group">
+          <div class="logo-badge" id="logo-slot"><img src="${LOGO_DATAURL}" alt="logo"></div>
+          <div class="title">
+            <div class="name brand">Ordini Cocktail</div>
+            <div class="sync-pill"><span class="sync-dot" style="background:${!hasStorage ? '#C4BBA4' : (connError ? '#8C3524' : '#7FA35C')}"></span>${!hasStorage ? 'Connessione non disponibile' : (connError ? 'Connessione assente — riprovo…' : 'Sincronizzato')}</div>
+          </div>
+        </div>
+      </header>
+      ${audioBanner}
+      ${pushBanner}
+      <main style="max-width:960px;">${body}</main>
+    `;
+  }
+
+  function guidaPanel(){
+    const tab = ui.guidaTab;
+    const list = (state.guida && state.guida[tab]) || [];
+    const itemsHtml = list.length ? list.map(g => `
+      <div class="guide-item" style="cursor:pointer;" onclick="App.openEditGuide('${tab}','${g.id}')">
+        <div class="guide-name">${escapeHtml(g.name)}</div>
+        <div class="guide-desc">${escapeHtml(g.desc)}</div>
+      </div>
+    `).join('') : `<div class="empty-hint">Nessuna voce ancora.<br>Tocca "+ Aggiungi voce" per iniziare.</div>`;
+    return `
+      <div class="overlay open" onclick="if(event.target===this) App.closeGuida()">
+        <div class="panel">
+          <div class="panel-header">
+            <div class="name-edit brand" style="font-family:Georgia,serif; font-size:19px;">Guida</div>
+            <button class="icon-btn panel-close" onclick="App.closeGuida()">✕</button>
+          </div>
+          <div class="panel-body">
+            <div class="cat-tabs">
+              <button class="cat-tab ${tab==='taglieri'?'active':''}" onclick="App.setGuidaTab('taglieri')">Taglieri</button>
+              <button class="cat-tab ${tab==='cocktail'?'active':''}" onclick="App.setGuidaTab('cocktail')">Cocktail</button>
+            </div>
+            <div class="cat-block-body">${itemsHtml}</div>
+            <button class="btn btn-outline btn-block" style="margin-top:14px;" onclick="App.openAddGuide('${tab}')">+ Aggiungi voce</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function logPanel(){
+    const entries = state.log || [];
+    const fmt = (iso) => {
+      try{
+        const d = new Date(iso);
+        return d.toLocaleDateString('it-IT', {day:'2-digit', month:'2-digit'}) + ' · ' + d.toLocaleTimeString('it-IT', {hour:'2-digit', minute:'2-digit'});
+      }catch(e){ return ''; }
+    };
+    const list = entries.length ? entries.map(e => `
+      <div class="cat-block">
+        <div class="cat-block-head">
+          <div class="cname">${escapeHtml(e.tableName)} <span style="font-weight:400; color:var(--muted); font-size:12px;">— ${fmt(e.timestamp)}</span></div>
+          <div style="font-weight:700; color:var(--wine);">${eur(e.total)}</div>
+        </div>
+        <div class="cat-block-body">
+          ${e.items.map(it => `
+            <div class="menu-item-row" style="cursor:default;">
+              <div>
+                <div class="mi-name">${it.qty}× ${escapeHtml(it.name)}${it.weight!=null ? ` (${it.weight}g)` : ''}</div>
+                ${it.note ? `<div class="mi-tag" style="color:var(--muted);">nota: ${escapeHtml(it.note)}</div>` : ''}
+              </div>
+              <div class="mi-price">${eur(it.total)}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('') : `<div class="empty-hint">Nessun conto chiuso ancora.<br>I conti separati compariranno qui.</div>`;
+
+    return `
+      <div class="overlay open" onclick="if(event.target===this) App.closeLog()">
+        <div class="panel">
+          <div class="panel-header">
+            <div class="name-edit brand" style="font-family:Georgia,serif; font-size:19px;">Log incassi</div>
+            <button class="icon-btn panel-close" onclick="App.closeLog()">✕</button>
+          </div>
+          <div class="panel-body">
+            ${list}
+            <button class="btn btn-outline btn-block" style="margin-top:22px; border-color:#8C3524; color:#8C3524;" onclick="App.resetNight()">Reset fine serata</button>
+            <div class="empty-hint" style="margin-top:8px;">Riporta i tavoli allo stato di partenza (4 tavoli standard) e svuota tutte le comande. Questo Log resta salvato.</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function exitConfirmMarkup(){
+    return `
+      <div class="modal-mini">
+        <div class="sheet">
+          <h3>Vuoi veramente chiudere la pagina?</h3>
+          <div class="sheet-actions">
+            <button class="btn btn-outline" onclick="App.cancelExit()">No, resta</button>
+            <button class="btn btn-danger" onclick="App.confirmExit()">Sì, chiudi</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function modalMarkup(){
+    const m = ui.modal;
+    if(!m) return '';
+    let title = '', body = '', actions = '';
+
+    if(m.type==='add-table' || m.type==='edit-table'){
+      const editing = m.type==='edit-table';
+      const t = editing ? state.tables.find(x=>x.id===m.id) : {name:'', shape:'round', seats:4};
+      title = editing ? 'Modifica tavolo' : 'Nuovo tavolo';
+      body = `
+        <div class="field"><label>Nome tavolo</label><input id="m-name" value="${escapeHtml(t.name)}" placeholder="Es. Tavolo terrazza"></div>
+        <div class="field">
+          <label>Forma</label>
+          <div class="shape-picker">
+            <div class="shape-opt ${t.shape==='round'?'selected':''}" onclick="App.pickShape('round')" id="shape-round">Rotondo</div>
+            <div class="shape-opt ${t.shape==='square'?'selected':''}" onclick="App.pickShape('square')" id="shape-square">Quadrato</div>
+          </div>
+        </div>
+        <div class="field"><label>Coperti</label><input id="m-seats" type="number" min="1" max="20" value="${t.seats}"></div>
+      `;
+      actions = `
+        ${editing ? `<button class="btn btn-danger" onclick="App.deleteTable('${t.id}')">Elimina</button>` : ''}
+        <button class="btn btn-primary" onclick="App.saveTable(${editing ? `'${t.id}'` : 'null'})">Salva</button>
+      `;
+    }
+
+    if(m.type==='add-category'){
+      title = 'Nuova categoria';
+      body = `<div class="field"><label>Nome categoria</label><input id="m-catname" placeholder="Es. Antipasti"></div>`;
+      actions = `<button class="btn btn-primary btn-block" onclick="App.saveCategory()">Salva</button>`;
+    }
+
+    if(m.type==='add-item' || m.type==='edit-item'){
+      const editing = m.type==='edit-item';
+      const cat = state.menu.find(c=>c.id===m.catId);
+      const it = editing ? cat.items.find(i=>i.id===m.itemId) : {name:'', price:'', weight:false, cocktail:false};
+      title = editing ? 'Modifica elemento' : `Nuovo elemento — ${escapeHtml(cat.name)}`;
+      body = `
+        <div class="field"><label>Nome</label><input id="m-iname" value="${escapeHtml(it.name)}" placeholder="Es. Spritz"></div>
+        <div class="checkbox-field">
+          <input type="checkbox" id="m-iweight" ${it.weight?'checked':''} onchange="App.toggleWeightLabel()">
+          <label for="m-iweight">Venduto al peso (es. affettati, taglieri)</label>
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox" id="m-icocktail" ${it.cocktail?'checked':''}>
+          <label for="m-icocktail">È un cocktail (arriva anche sulla schermata Bar)</label>
+        </div>
+        <div class="field"><label id="m-iprice-label">${it.weight ? 'Prezzo al etto (100g)' : 'Prezzo'}</label><input id="m-iprice" type="number" min="0" step="0.1" value="${it.price}" placeholder="0,00"></div>
+      `;
+      actions = `
+        ${editing ? `<button class="btn btn-danger" onclick="App.deleteItem('${m.catId}','${it.id}')">Elimina</button>` : ''}
+        <button class="btn btn-primary" onclick="App.saveItem('${m.catId}', ${editing ? `'${it.id}'` : 'null'})">Salva</button>
+      `;
+    }
+
+    if(m.type==='add-guide' || m.type==='edit-guide'){
+      const editing = m.type==='edit-guide';
+      const list = (state.guida && state.guida[m.tab]) || [];
+      const it = editing ? list.find(x=>x.id===m.id) : {name:'', desc:''};
+      const tabLabel = m.tab==='taglieri' ? 'Taglieri' : 'Cocktail';
+      title = editing ? 'Modifica voce guida' : `Nuova voce — ${tabLabel}`;
+      body = `
+        <div class="field"><label>Nome</label><input id="m-gname" value="${escapeHtml(it.name)}" placeholder="${m.tab==='taglieri' ? 'Es. Salame' : 'Es. Negroni'}"></div>
+        <div class="field"><label>Descrizione</label><textarea id="m-gdesc" rows="3" placeholder="${m.tab==='taglieri' ? 'Note, provenienza, abbinamenti...' : 'Ingredienti e dosi...'}">${escapeHtml(it.desc)}</textarea></div>
+      `;
+      actions = `
+        ${editing ? `<button class="btn btn-danger" onclick="App.deleteGuide('${m.tab}','${it.id}')">Elimina</button>` : ''}
+        <button class="btn btn-primary" onclick="App.saveGuide('${m.tab}', ${editing ? `'${it.id}'` : 'null'})">Salva</button>
+      `;
+    }
+
+    return `
+      <div class="modal-mini" onclick="if(event.target===this) App.closeModal()">
+        <div class="sheet">
+          <h3>${title}</h3>
+          ${body}
+          <div class="sheet-actions">${actions}</div>
+          <button class="btn-ghost" style="width:100%; margin-top:4px;" onclick="App.closeModal()">Annulla</button>
+        </div>
+      </div>
+    `;
+  }
+
+  /* ---------- actions ---------- */
+  const App = {
+    toggleEdit(){ ui.editMode = !ui.editMode; render(); },
+
+    openTable(id){
+      ui.openTableId = id; ui.activeCat = null;
+      ui.selectMode = false; ui.selectedLines = {};
+      const conti = getConti(id);
+      ui.activeContoId = conti[0].id;
+      render();
+    },
+    closeTable(){ ui.openTableId = null; render(); },
+    renameTable(id, val){
+      const t = state.tables.find(x=>x.id===id); if(!t) return;
+      t.name = val.trim() || t.name;
+      persist('tables'); render();
+    },
+    setActiveCat(id){ ui.activeCat = id; render(); },
+
+    setActiveConto(id){ ui.activeContoId = id; ui.selectMode = false; ui.selectedLines = {}; render(); },
+
+    toggleSelectMode(){ ui.selectMode = !ui.selectMode; ui.selectedLines = {}; render(); },
+    toggleLineSelected(lineId){
+      if(ui.selectedLines[lineId]) delete ui.selectedLines[lineId];
+      else ui.selectedLines[lineId] = true;
+      render();
+    },
+    makeSeparateBill(){
+      const tid = ui.openTableId;
+      const conti = getConti(tid);
+      const conto = conti.find(c=>c.id===ui.activeContoId) || conti[0];
+      const selectedIds = Object.keys(ui.selectedLines);
+      if(selectedIds.length===0){ alert('Seleziona almeno un elemento da mettere in conto.'); return; }
+      const chosen = conto.lines.filter(l=>selectedIds.includes(l.id));
+      const total = chosen.reduce((s,l)=>s+lineTotal(l), 0);
+      if(!confirm(`Confermi il conto separato di ${chosen.length} elementi per un totale di ${eur(total)}?\nVerranno tolti dal tavolo e registrati nel Log.`)) return;
+      const t = state.tables.find(x=>x.id===tid);
+      const entry = {
+        id: uid(),
+        timestamp: new Date().toISOString(),
+        tableId: tid,
+        tableName: t ? t.name : '—',
+        contoName: conto.name,
+        items: chosen.map(l => ({ name:l.name, qty:l.qty, weight:l.weight, price:l.price, note:l.note||'', total: lineTotal(l) })),
+        total,
+      };
+      state.log = state.log || [];
+      state.log.unshift(entry);
+      conto.lines = conto.lines.filter(l=>!selectedIds.includes(l.id));
+      ui.selectMode = false; ui.selectedLines = {};
+      persist('orders'); persist('log'); render();
+    },
+    addConto(){
+      const conti = getConti(ui.openTableId);
+      if(conti.length >= 6){ alert('Massimo 6 conti per tavolo.'); return; }
+      const nc = {id: uid(), name: 'Conto '+(conti.length+1), lines: []};
+      conti.push(nc);
+      ui.activeContoId = nc.id;
+      persist('orders'); render();
+    },
+    deleteConto(id){
+      const conti = getConti(ui.openTableId);
+      if(conti.length <= 1){ alert('Deve rimanere almeno un conto.'); return; }
+      if(!confirm('Eliminare questo conto e i suoi elementi?')) return;
+      state.orders[ui.openTableId] = conti.filter(c=>c.id!==id);
+      if(ui.activeContoId===id) ui.activeContoId = state.orders[ui.openTableId][0].id;
+      persist('orders'); render();
+    },
+
+    addLine(catId, itemId){
+      const cat = state.menu.find(c=>c.id===catId); const it = cat.items.find(i=>i.id===itemId);
+      const tid = ui.openTableId;
+      const conti = getConti(tid);
+      const conto = conti.find(c=>c.id===ui.activeContoId) || conti[0];
+      const existing = !it.weight ? conto.lines.find(l=>l.itemId===itemId) : null;
+      if(existing){ existing.qty += 1; }
+      else{
+        conto.lines.push({
+          id: uid(), itemId: it.id, name: it.name, categoryName: cat.name,
+          price: it.price, qty: 1, weight: it.weight ? 100 : null, note: '',
+          cocktail: !!it.cocktail, createdAt: new Date().toISOString()
+        });
+      }
+      persist('orders'); render();
+    },
+    changeQty(lineId, delta){
+      const tid = ui.openTableId; const loc = findLine(tid, lineId); if(!loc) return;
+      loc.line.qty += delta;
+      if(loc.line.qty <= 0){ loc.conto.lines = loc.conto.lines.filter(x=>x.id!==lineId); }
+      persist('orders'); render();
+    },
+    setWeight(lineId, val){
+      const tid = ui.openTableId; const loc = findLine(tid, lineId); if(!loc) return;
+      loc.line.weight = Math.max(0, parseFloat(val)||0);
+      persist('orders'); render();
+    },
+    setNote(lineId, val){
+      const tid = ui.openTableId; const loc = findLine(tid, lineId); if(!loc) return;
+      loc.line.note = val;
+      persist('orders');
+    },
+    removeLine(lineId){
+      const tid = ui.openTableId; const loc = findLine(tid, lineId); if(!loc) return;
+      loc.conto.lines = loc.conto.lines.filter(x=>x.id!==lineId);
+      persist('orders'); render();
+    },
+
+    openMenuManager(){ ui.menuManagerOpen = true; render(); },
+    closeMenuManager(){ ui.menuManagerOpen = false; render(); },
+
+    openGuida(){ ui.guidaOpen = true; render(); },
+    closeGuida(){ ui.guidaOpen = false; render(); },
+    setGuidaTab(tab){ ui.guidaTab = tab; render(); },
+    openAddGuide(tab){ ui.modal = {type:'add-guide', tab}; render(); },
+    openEditGuide(tab, id){ ui.modal = {type:'edit-guide', tab, id}; render(); },
+    saveGuide(tab, id){
+      const name = document.getElementById('m-gname').value.trim();
+      const desc = document.getElementById('m-gdesc').value.trim();
+      if(!name) return;
+      if(!state.guida) state.guida = {taglieri:[], cocktail:[]};
+      if(!state.guida[tab]) state.guida[tab] = [];
+      if(id){
+        const it = state.guida[tab].find(x=>x.id===id);
+        it.name = name; it.desc = desc;
+      } else {
+        state.guida[tab].push({id: uid(), name, desc});
+      }
+      persist('guida'); ui.modal = null; render();
+    },
+    deleteGuide(tab, id){
+      if(!confirm('Eliminare questa voce dalla guida?')) return;
+      state.guida[tab] = (state.guida[tab]||[]).filter(x=>x.id!==id);
+      persist('guida'); ui.modal = null; render();
+    },
+
+    openLog(){ ui.logOpen = true; render(); },
+    closeLog(){ ui.logOpen = false; render(); },
+    barUnlockAudio(){
+      try{
+        if(!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if(audioCtx.state === 'suspended') audioCtx.resume();
+        audioUnlocked = true;
+        beep();
+      }catch(e){ audioUnlocked = true; }
+      render();
+    },
+    barToggleDone(lineId){
+      barDismissed[lineId] = true;
+      render();
+    },
+    enablePush(){ enablePushNotifications(); },
+    resetNight(){
+      if(!confirm('Sei sicuro di voler resettare la serata?\n\nI tavoli torneranno a essere 4 di default ("Tavolo 1"-"Tavolo 4") e tutte le comande verranno azzerate.\nIl Log storico resterà comunque salvato.')) return;
+      state.tables = defaultTables();
+      state.orders = {};
+      persist('tables');
+      persist('orders');
+      ui.logOpen = false;
+      render();
+    },
+
+    openAddTable(){ ui.modal = {type:'add-table', shape:'round'}; render(); },
+    openEditTable(id){ const t = state.tables.find(x=>x.id===id); ui.modal = {type:'edit-table', id, shape:t.shape}; render(); },
+    pickShape(shape){ ui.modal.shape = shape; render(); document.getElementById('m-name')?.focus(); },
+    saveTable(id){
+      const name = document.getElementById('m-name').value.trim() || (id ? state.tables.find(t=>t.id===id).name : 'Nuovo tavolo');
+      const seats = Math.max(1, parseInt(document.getElementById('m-seats').value)||4);
+      const shape = ui.modal.shape;
+      if(id){
+        const t = state.tables.find(x=>x.id===id);
+        t.name = name; t.seats = seats; t.shape = shape;
+      } else {
+        if(state.tables.length >= 10){ alert('Massimo 10 tavoli.'); return; }
+        state.tables.push({id: uid(), name, seats, shape});
+      }
+      persist('tables'); ui.modal = null; render();
+    },
+    deleteTable(id){
+      if(!confirm('Eliminare questo tavolo e la sua comanda?')) return;
+      state.tables = state.tables.filter(t=>t.id!==id);
+      delete state.orders[id];
+      persist('tables'); persist('orders');
+      ui.modal = null; render();
+    },
+
+    openAddCategory(){ ui.modal = {type:'add-category'}; render(); },
+    saveCategory(){
+      const name = document.getElementById('m-catname').value.trim();
+      if(!name) return;
+      state.menu.push({id: uid(), name, items: []});
+      persist('menu'); ui.modal = null; render();
+    },
+    deleteCategory(id){
+      if(!confirm('Eliminare questa categoria e tutti i suoi elementi?')) return;
+      state.menu = state.menu.filter(c=>c.id!==id);
+      persist('menu'); render();
+    },
+
+    openAddItem(catId){ ui.modal = {type:'add-item', catId}; render(); },
+    openEditItem(catId, itemId){ ui.modal = {type:'edit-item', catId, itemId}; render(); },
+    toggleWeightLabel(){
+      const on = document.getElementById('m-iweight').checked;
+      document.getElementById('m-iprice-label').textContent = on ? 'Prezzo al etto (100g)' : 'Prezzo';
+    },
+    saveItem(catId, itemId){
+      const name = document.getElementById('m-iname').value.trim();
+      const price = parseFloat(document.getElementById('m-iprice').value) || 0;
+      const weight = document.getElementById('m-iweight').checked;
+      const cocktail = document.getElementById('m-icocktail').checked;
+      if(!name) return;
+      const cat = state.menu.find(c=>c.id===catId);
+      if(itemId){
+        const it = cat.items.find(i=>i.id===itemId);
+        it.name = name; it.price = price; it.weight = weight; it.cocktail = cocktail;
+      } else {
+        cat.items.push({id: uid(), name, price, weight, cocktail});
+      }
+      persist('menu'); ui.modal = null; render();
+    },
+    deleteItem(catId, itemId){
+      const cat = state.menu.find(c=>c.id===catId);
+      cat.items = cat.items.filter(i=>i.id!==itemId);
+      persist('menu'); ui.modal = null; render();
+    },
+
+    closeModal(){ ui.modal = null; render(); },
+
+    cancelExit(){ ui.exitConfirmOpen = false; render(); },
+    confirmExit(){
+      ui.exitConfirmOpen = false;
+      exiting = true;
+      render();
+      history.back();
+    },
+  };
+  window.App = App;
+
+  /* ---------- doppio "indietro" per uscire ---------- */
+  let exiting = false;
+  try{
+    history.pushState({guard:true}, '', location.href);
+    window.addEventListener('popstate', function(){
+      if(exiting) return;
+      history.pushState({guard:true}, '', location.href);
+      ui.exitConfirmOpen = true;
+      render();
+    });
+  }catch(e){ /* history API non disponibile: nessun blocco, il back funziona normalmente */ }
+
+  loadAll();
+})();
+</script>
+</body>
+</html>
